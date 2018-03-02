@@ -1,0 +1,62 @@
+install-package jQuery
+
+ jquery »Â ’›ÕÂ ‘„« «÷«›Â ‘œÂ »«‘œ
+
+
+
+------------------------controller----------------------------------
+        public ActionResult Index()
+        {
+            return View();
+        }
+        public ActionResult GetMessage(string name)
+        {
+            return Content("Welcome dear " + name);
+        }
+
+
+
+
+-------------------------------view-----------------------------------
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Request Ajax with jQuery</title>
+</head>
+<body>
+    <input type="text" name="name" id="name" />
+    <a href="#" id="get-message-link">Get Message</a>
+    <div id="message-container"></div>
+
+    <script src="~/Scripts/jquery-3.3.1.js"></script>
+    <script>
+    $(function() {
+        $('#get-message-link').on('click', function(e) {
+            e.preventDefault();
+            $.ajax({
+                url: '@Url.Action("GetMessage","Home")',
+                data: { name: $('#name').val() },
+                beforeSend: function () {
+                    alert('before submit request!');
+                },
+                success: function(result) {
+                    $('#message-container').html(result);
+                },
+                error: function() {
+                    alert('something was wrong!');
+                },
+                complete: function() {
+                    alert('request completed!');
+                }
+            });
+        });
+    });
+    </script>
+</body>
+</html>
+
+
+----------------------------------------------------------------------------
