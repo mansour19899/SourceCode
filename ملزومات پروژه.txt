@@ -1,0 +1,8 @@
+1- remove App_Data
+2- create newfolders
+
+ViewModels  Models--->DomainModels,Repositores,Enums,EntityModels   Helpers-->Utilites,Attributes,HtmlHelpers,Filters
+
+3-Manage NuGet Pachages
+
+EntityFramework, Newtonsoft.Json , jQuery , jQuery.Validation , jQuery.UI.Combined , Microsoft.jQuery.Unobtrusive.Ajax ,
