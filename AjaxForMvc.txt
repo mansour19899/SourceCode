@@ -1,6 +1,6 @@
 install-package jQuery
 
- jquery Èå ÕİÍå ÔãÇ ÇÖÇİå ÔÏå ÈÇÔÏ
+ jquery Added in page
 
 
 
