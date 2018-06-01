@@ -6,3 +6,8 @@ ViewModels  Models--->DomainModels,Repositores,Enums,EntityModels   Helpers-->Ut
 3-Manage NuGet Pachages
 
 EntityFramework, Newtonsoft.Json , jQuery , jQuery.Validation , jQuery.UI.Combined , Microsoft.jQuery.Unobtrusive.Ajax ,
+Microsoft.jQuery.Unobtrusive.Validation  ,  Microsoft.AspNet.Web.Optimization  , 
+
+ 4- add database in DomainModels 
+
+5- create file UserMetaData.cs
