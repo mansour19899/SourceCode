@@ -1,0 +1,27 @@
+Install-Package Microsoft.AspNet.Identity.Samples -Pre
+
+
+ AdidasNew
+
+Admin@123456
+
+
+  <connectionStrings>
+    <add name="DatabaseContext" connectionString="data source=.;initial catalog=jasem; integrated security=SSPI;User ID=sa;Password=123;" providerName="System.Data.SqlClient"/>
+    <add name="DefaultConnection" connectionString="Data Source=.;Initial Catalog=jasem;Integrated Security=SSPI;User ID=sa;Password=123;" providerName="System.Data.SqlClient" />
+  </connectionStrings>
+
+
+https://www.dotnettricks.com/learn/entityframework/entity-framework-6-code-first-migrations-with-multiple-data-contexts
+
+
+    enable-migrations -ContextTypeName <DbContext-Name-with-Namespaces> -MigrationsDirectory:<Migrations-Directory-Name>
+    Add-Migration -configuration <DbContext-Migrations-Configuration-Class-with-Namespaces> <Migrations-Name>
+    Update-Database -configuration <DbContext-Migrations-Configuration-Class-with-Namespaces> -Verbose
+
+
+
+    enable-migrations -ContextTypeName MultiDataContextMigrations.Models.DataContext -MigrationsDirectory:DataContextMigrations
+    Add-Migration -configuration MultiDataContextMigrations.DataContextMigrations.Configuration Initial
+    Update-Database -configuration MultiDataContextMigrations.DataContextMigrations.Configuration -Verbose
+
