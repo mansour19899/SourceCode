@@ -25,3 +25,9 @@ https://www.dotnettricks.com/learn/entityframework/entity-framework-6-code-first
     Add-Migration -configuration MultiDataContextMigrations.DataContextMigrations.Configuration Initial
     Update-Database -configuration MultiDataContextMigrations.DataContextMigrations.Configuration -Verbose
 
+
+use master
+ALTER DATABASE NewYorkTimesDb 
+   SET SINGLE_USER WITH ROLLBACK IMMEDIATE 
+ALTER DATABASE NewYorkTimesDb SET MULTI_USER
+
